@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mainwindow.ui'
 **
-** Created by: Qt User Interface Compiler version 5.7.1
+** Created by: Qt User Interface Compiler version 5.7.0
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -45,31 +45,31 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QStringLiteral("MainWindow"));
-        MainWindow->resize(1111, 892);
+        MainWindow->resize(755, 576);
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         lcdNumber = new QLCDNumber(centralWidget);
         lcdNumber->setObjectName(QStringLiteral("lcdNumber"));
-        lcdNumber->setGeometry(QRect(980, 740, 64, 23));
+        lcdNumber->setGeometry(QRect(630, 420, 64, 23));
         horizontalSlider = new QSlider(centralWidget);
         horizontalSlider->setObjectName(QStringLiteral("horizontalSlider"));
-        horizontalSlider->setGeometry(QRect(140, 790, 891, 31));
+        horizontalSlider->setGeometry(QRect(120, 480, 571, 16));
         horizontalSlider->setOrientation(Qt::Horizontal);
         openGLWidget = new OpenGLWidget(centralWidget);
         openGLWidget->setObjectName(QStringLiteral("openGLWidget"));
-        openGLWidget->setGeometry(QRect(20, 10, 1071, 701));
+        openGLWidget->setGeometry(QRect(20, 10, 691, 391));
         upper_botton = new QPushButton(centralWidget);
         upper_botton->setObjectName(QStringLiteral("upper_botton"));
-        upper_botton->setGeometry(QRect(20, 720, 75, 23));
+        upper_botton->setGeometry(QRect(30, 420, 75, 23));
         lower_botton = new QPushButton(centralWidget);
         lower_botton->setObjectName(QStringLiteral("lower_botton"));
-        lower_botton->setGeometry(QRect(20, 760, 75, 23));
+        lower_botton->setGeometry(QRect(30, 460, 75, 23));
         rt_botton = new QPushButton(centralWidget);
         rt_botton->setObjectName(QStringLiteral("rt_botton"));
-        rt_botton->setGeometry(QRect(20, 800, 75, 23));
+        rt_botton->setGeometry(QRect(30, 500, 75, 23));
         set_first_frame_botton = new QPushButton(centralWidget);
         set_first_frame_botton->setObjectName(QStringLiteral("set_first_frame_botton"));
-        set_first_frame_botton->setGeometry(QRect(170, 750, 101, 21));
+        set_first_frame_botton->setGeometry(QRect(160, 430, 101, 21));
         MainWindow->setCentralWidget(centralWidget);
         lcdNumber->raise();
         horizontalSlider->raise();
@@ -80,7 +80,7 @@ public:
         upper_botton->raise();
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QStringLiteral("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 1111, 21));
+        menuBar->setGeometry(QRect(0, 0, 755, 18));
         MainWindow->setMenuBar(menuBar);
         mainToolBar = new QToolBar(MainWindow);
         mainToolBar->setObjectName(QStringLiteral("mainToolBar"));
@@ -95,17 +95,18 @@ public:
         QObject::connect(lower_botton, SIGNAL(clicked()), MainWindow, SLOT(lower_click()));
         QObject::connect(rt_botton, SIGNAL(clicked()), MainWindow, SLOT(rt_click()));
         QObject::connect(set_first_frame_botton, SIGNAL(clicked()), MainWindow, SLOT(rt_click()));
+        QObject::connect(horizontalSlider, SIGNAL(valueChanged(int)), MainWindow, SLOT(sent_rt(int)));
 
         QMetaObject::connectSlotsByName(MainWindow);
     } // setupUi
 
     void retranslateUi(QMainWindow *MainWindow)
     {
-        MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", Q_NULLPTR));
-        upper_botton->setText(QApplication::translate("MainWindow", "Upper", Q_NULLPTR));
-        lower_botton->setText(QApplication::translate("MainWindow", "Lower", Q_NULLPTR));
-        rt_botton->setText(QApplication::translate("MainWindow", "RT", Q_NULLPTR));
-        set_first_frame_botton->setText(QApplication::translate("MainWindow", "Set first Frame", Q_NULLPTR));
+        MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", 0));
+        upper_botton->setText(QApplication::translate("MainWindow", "Upper", 0));
+        lower_botton->setText(QApplication::translate("MainWindow", "Lower", 0));
+        rt_botton->setText(QApplication::translate("MainWindow", "RT", 0));
+        set_first_frame_botton->setText(QApplication::translate("MainWindow", "Set first Frame", 0));
     } // retranslateUi
 
 };

@@ -21,9 +21,11 @@ public:
 private slots:
 	void upper_click();
 	void lower_click();
+	void rt_click();
+	void sent_rt(int);
 private:
-	void RT_parser(const char* rt_path, vector<vector<float>> RTs);
-	vector<vector<float>> RTs;
+	void RT_parser(const char* rt_path, vector<vector<float>> &RTs);
+	vector<vector<float>> RT_result;
     Ui::MainWindow *ui;
 };
 
