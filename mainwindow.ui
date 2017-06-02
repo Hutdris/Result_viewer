@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>755</width>
-    <height>576</height>
+    <width>1096</width>
+    <height>785</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,8 +17,8 @@
    <widget class="QLCDNumber" name="lcdNumber">
     <property name="geometry">
      <rect>
-      <x>630</x>
-      <y>420</y>
+      <x>940</x>
+      <y>630</y>
       <width>64</width>
       <height>23</height>
      </rect>
@@ -27,10 +27,10 @@
    <widget class="QSlider" name="horizontalSlider">
     <property name="geometry">
      <rect>
-      <x>120</x>
-      <y>480</y>
-      <width>571</width>
-      <height>16</height>
+      <x>190</x>
+      <y>680</y>
+      <width>791</width>
+      <height>20</height>
      </rect>
     </property>
     <property name="orientation">
@@ -40,18 +40,18 @@
    <widget class="OpenGLWidget" name="openGLWidget">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>10</y>
-      <width>691</width>
-      <height>391</height>
+      <x>100</x>
+      <y>20</y>
+      <width>901</width>
+      <height>581</height>
      </rect>
     </property>
    </widget>
    <widget class="QPushButton" name="upper_botton">
     <property name="geometry">
      <rect>
-      <x>30</x>
-      <y>420</y>
+      <x>70</x>
+      <y>620</y>
       <width>75</width>
       <height>23</height>
      </rect>
@@ -63,8 +63,8 @@
    <widget class="QPushButton" name="lower_botton">
     <property name="geometry">
      <rect>
-      <x>30</x>
-      <y>460</y>
+      <x>70</x>
+      <y>660</y>
       <width>75</width>
       <height>23</height>
      </rect>
@@ -76,8 +76,8 @@
    <widget class="QPushButton" name="rt_botton">
     <property name="geometry">
      <rect>
-      <x>30</x>
-      <y>500</y>
+      <x>70</x>
+      <y>700</y>
       <width>75</width>
       <height>23</height>
      </rect>
@@ -89,14 +89,27 @@
    <widget class="QPushButton" name="set_first_frame_botton">
     <property name="geometry">
      <rect>
-      <x>160</x>
-      <y>430</y>
+      <x>200</x>
+      <y>630</y>
       <width>101</width>
       <height>21</height>
      </rect>
     </property>
     <property name="text">
      <string>Set first Frame</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>350</x>
+      <y>630</y>
+      <width>121</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Export Current Status</string>
     </property>
    </widget>
    <zorder>lcdNumber</zorder>
@@ -106,14 +119,15 @@
    <zorder>rt_botton</zorder>
    <zorder>set_first_frame_botton</zorder>
    <zorder>upper_botton</zorder>
+   <zorder>pushButton</zorder>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>755</width>
-     <height>18</height>
+     <width>1096</width>
+     <height>21</height>
     </rect>
    </property>
   </widget>
@@ -145,11 +159,11 @@
    <hints>
     <hint type="sourcelabel">
      <x>284</x>
-     <y>521</y>
+     <y>713</y>
     </hint>
     <hint type="destinationlabel">
-     <x>648</x>
-     <y>468</y>
+     <x>940</x>
+     <y>663</y>
     </hint>
    </hints>
   </connection>
@@ -161,7 +175,7 @@
    <hints>
     <hint type="sourcelabel">
      <x>80</x>
-     <y>468</y>
+     <y>653</y>
     </hint>
     <hint type="destinationlabel">
      <x>127</x>
@@ -177,7 +191,7 @@
    <hints>
     <hint type="sourcelabel">
      <x>80</x>
-     <y>508</y>
+     <y>693</y>
     </hint>
     <hint type="destinationlabel">
      <x>130</x>
@@ -193,7 +207,7 @@
    <hints>
     <hint type="sourcelabel">
      <x>90</x>
-     <y>548</y>
+     <y>733</y>
     </hint>
     <hint type="destinationlabel">
      <x>131</x>
@@ -209,7 +223,7 @@
    <hints>
     <hint type="sourcelabel">
      <x>235</x>
-     <y>476</y>
+     <y>663</y>
     </hint>
     <hint type="destinationlabel">
      <x>297</x>
@@ -224,12 +238,28 @@
    <slot>sent_rt(int)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>166</x>
-     <y>516</y>
+     <x>190</x>
+     <y>713</y>
     </hint>
     <hint type="destinationlabel">
      <x>176</x>
      <y>542</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>ExportCurrentState()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>369</x>
+     <y>678</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>377</x>
+     <y>754</y>
     </hint>
    </hints>
   </connection>
@@ -240,5 +270,6 @@
   <slot>rt_click()</slot>
   <slot>set_first_frame()</slot>
   <slot>sent_rt(int)</slot>
+  <slot>ExportCurrentState()</slot>
  </slots>
 </ui>

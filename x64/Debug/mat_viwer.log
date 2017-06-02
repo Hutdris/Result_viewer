@@ -1,0 +1,10 @@
+﻿  mainwindow.cpp
+C:\opencv\build\include\opencv2/core/mat.hpp(1965): warning C4819: The file contains a character that cannot be represented in the current code page (950). Save the file in Unicode format to prevent data loss
+C:\opencv\build\include\opencv2/core/persistence.hpp : warning C4819: The file contains a character that cannot be represented in the current code page (950). Save the file in Unicode format to prevent data loss
+C:\opencv\build\include\opencv2/core/utility.hpp : warning C4819: The file contains a character that cannot be represented in the current code page (950). Save the file in Unicode format to prevent data loss
+mainwindow.cpp(28): warning C4189: 'value': local variable is initialized but not referenced
+mainwindow.cpp(65): warning C4129: 'd': unrecognized character escape sequence
+mainwindow.cpp(65): warning C4129: '.': unrecognized character escape sequence
+mainwindow.cpp(118): warning C4189: 'pt': local variable is initialized but not referenced
+  mat_viwer.vcxproj -> C:\Users\Louis\Documents\Visual Studio 2015\Projects\Result_viewer-master\debug\mat_viwer.exe
+  mat_viwer.vcxproj -> debug\mat_viwer.pdb (Full PDB)

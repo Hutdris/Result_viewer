@@ -1,0 +1,37 @@
+﻿  Moc'ing mainwindow.h...
+  Uic'ing mainwindow.ui...
+  Moc'ing OpenGLWidget.h...
+  moc_mainwindow.cpp
+  moc_OpenGLWidget.cpp
+C:\opencv\build\include\opencv2/core/mat.hpp(1965): warning C4819: The file contains a character that cannot be represented in the current code page (950). Save the file in Unicode format to prevent data loss
+C:\opencv\build\include\opencv2/core/persistence.hpp : warning C4819: The file contains a character that cannot be represented in the current code page (950). Save the file in Unicode format to prevent data loss
+C:\opencv\build\include\opencv2/core/utility.hpp : warning C4819: The file contains a character that cannot be represented in the current code page (950). Save the file in Unicode format to prevent data loss
+  main.cpp
+  mainwindow.cpp
+C:\opencv\build\include\opencv2/core/mat.hpp(1965): warning C4819: The file contains a character that cannot be represented in the current code page (950). Save the file in Unicode format to prevent data loss
+C:\opencv\build\include\opencv2/core/persistence.hpp : warning C4819: The file contains a character that cannot be represented in the current code page (950). Save the file in Unicode format to prevent data loss
+C:\opencv\build\include\opencv2/core/utility.hpp : warning C4819: The file contains a character that cannot be represented in the current code page (950). Save the file in Unicode format to prevent data loss
+mainwindow.cpp(28): warning C4189: 'value': local variable is initialized but not referenced
+mainwindow.cpp(65): warning C4129: 'd': unrecognized character escape sequence
+mainwindow.cpp(65): warning C4129: '.': unrecognized character escape sequence
+mainwindow.cpp(118): warning C4189: 'pt': local variable is initialized but not referenced
+  OpenGLWidget.cpp
+C:\opencv\build\include\opencv2/core/mat.hpp(1965): warning C4819: The file contains a character that cannot be represented in the current code page (950). Save the file in Unicode format to prevent data loss
+C:\opencv\build\include\opencv2/core/persistence.hpp : warning C4819: The file contains a character that cannot be represented in the current code page (950). Save the file in Unicode format to prevent data loss
+C:\opencv\build\include\opencv2/core/utility.hpp : warning C4819: The file contains a character that cannot be represented in the current code page (950). Save the file in Unicode format to prevent data loss
+OpenGLWidget.cpp(9): warning C4838: conversion from 'double' to 'float' requires a narrowing conversion
+OpenGLWidget.cpp(9): warning C4305: 'initializing': truncation from 'double' to 'float'
+OpenGLWidget.cpp(13): warning C4838: conversion from 'double' to 'GLfloat' requires a narrowing conversion
+OpenGLWidget.cpp(13): warning C4305: 'initializing': truncation from 'double' to 'GLfloat'
+OpenGLWidget.cpp(37): warning C4838: conversion from 'double' to 'GLfloat' requires a narrowing conversion
+OpenGLWidget.cpp(37): warning C4305: 'initializing': truncation from 'double' to 'GLfloat'
+OpenGLWidget.cpp(38): warning C4838: conversion from 'double' to 'GLfloat' requires a narrowing conversion
+OpenGLWidget.cpp(38): warning C4305: 'initializing': truncation from 'double' to 'GLfloat'
+OpenGLWidget.cpp(63): warning C4189: 'timer': local variable is initialized but not referenced
+OpenGLWidget.cpp(205): warning C4189: 'pointSize': local variable is initialized but not referenced
+OpenGLWidget.cpp(334): warning C4189: 'old_ratio': local variable is initialized but not referenced
+OpenGLWidget.cpp(388): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+  stlloader.cpp
+  Generating Code...
+c:\users\louis\documents\visual studio 2015\projects\result_viewer-master\openglwidget.cpp(59): warning C4715: 'OpenGLWidget::getModelVertexs': not all control paths return a value
+  mat_viwer.vcxproj -> C:\Users\Louis\Documents\Visual Studio 2015\Projects\Result_viewer-master\release\mat_viwer.exe

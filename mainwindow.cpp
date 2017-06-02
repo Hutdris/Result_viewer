@@ -5,6 +5,8 @@
 #include <string>
 #include <regex>
 
+using namespace std;
+
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
@@ -20,6 +22,29 @@ MainWindow::MainWindow(QWidget *parent) :
 	QString rtPath = "tracing_result/RT.txt";
 	this->RT_parser(rtPath.toStdString().c_str(), RT_result);
 	ui->horizontalSlider->setMaximum(int(RT_result.size() - 1));
+}
+
+void MainWindow::ExportCurrentState() {
+	int value = 0;
+	RT_result;
+	int idx = ui->horizontalSlider->value();
+	ofstream od("current_state_.txt");
+	for (size_t i = 0; i < 4; i++){ 	
+		for (size_t j = 0; j < 4; j++) {
+			od << RT_result.at(idx).at(i + j*4) << ',';
+		}
+		od<<endl;
+	}
+	
+	od.close();
+	/*
+	ofstream od(file_name);
+	for (auto itt = vec.begin(); itt != vec.end(); itt++) {
+		od << *itt << endl;
+	}
+	od.close();
+	vec.clear();
+	*/
 }
 
 MainWindow::~MainWindow()
@@ -90,5 +115,7 @@ void MainWindow::rt_click() {
 void MainWindow::sent_rt(int frame_idx) {
 	float* pt = &(RT_result.at(frame_idx)[0]);
 	ui->openGLWidget->updateRT(&(RT_result.at(frame_idx)[0]));
+	ui->openGLWidget->update_tripointbyRT();
 	ui->openGLWidget->update();
+	
 }

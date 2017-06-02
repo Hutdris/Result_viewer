@@ -20,7 +20,7 @@ class OpenGLWidget : public QOpenGLWidget
 	Q_ENUMS(Position)
 public:
 
-
+	void updateRT(float *RT);
 	cv::Mat *tracing_points;
 	cv::Mat init_pos, mass_point;
 	vector <cv::Mat> trace;
@@ -42,13 +42,14 @@ public:
 	private:
 
 	};
+	void update_tripointbyRT();
 	void set_stlModel(const char *model_path, Position p);
 	GLuint makeObject(STLModel *model);
 	void keyPressEvent(QKeyEvent *e);
 	vector <GLfloat> getModelVertexs(Position mPos);
 	void SetLightSource();
 	void SetMaterial();
-	void updateRT(float *RT);
+	
 	float qNormalizeAngle(float angle) {
 	while (angle > 360.f)
 		angle -= 360.f;

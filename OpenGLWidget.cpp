@@ -88,6 +88,14 @@ void OpenGLWidget::tracing_output_reset() {
 	tracing_pts.clear();
 	tracing_pts.push_back(tracing_init_pos);
 }
+void OpenGLWidget::update_tripointbyRT () {
+	QVector3D cur_pt;
+	cur_pt.setX((lower.RT[0] * tracing_init_pos.x() + lower.RT[4] * tracing_init_pos.y()+ lower.RT[8] * tracing_init_pos.z() + lower.RT[12]));
+	cur_pt.setY((lower.RT[1] * tracing_init_pos.x() + lower.RT[5] * tracing_init_pos.y()+ lower.RT[9] * tracing_init_pos.z() + lower.RT[13]));
+	cur_pt.setZ((lower.RT[2] * tracing_init_pos.x() + lower.RT[6] * tracing_init_pos.y() + lower.RT[10] * tracing_init_pos.z() + lower.RT[14]));
+	tracing_pts.push_back(cur_pt);
+
+}
 void OpenGLWidget::set_tracing_points(cv::Mat points) {
 	if (points.cols != 9) {
 		return;
@@ -103,12 +111,7 @@ void OpenGLWidget::set_tracing_points(cv::Mat points) {
 		_mass_point.at<float>(i, 0) = _sum;
 	}
 	mass_point = _mass_point.clone();
-	trace.push_back(mass_point);
-	QVector3D cur_pt;
-	cur_pt.setX((lower.RT[0] * tracing_init_pos.x() + lower.RT[4] * tracing_init_pos.y()+ lower.RT[8] * tracing_init_pos.z() + lower.RT[12]));
-	cur_pt.setY((lower.RT[1] * tracing_init_pos.x() + lower.RT[5] * tracing_init_pos.y()+ lower.RT[9] * tracing_init_pos.z() + lower.RT[13]));
-	cur_pt.setZ((lower.RT[2] * tracing_init_pos.x() + lower.RT[6] * tracing_init_pos.y() + lower.RT[10] * tracing_init_pos.z() + lower.RT[14]));
-	tracing_pts.push_back(cur_pt);
+
 	
 };
 void OpenGLWidget::drawTrace() {
@@ -132,14 +135,9 @@ void OpenGLWidget::drawTrace() {
 		qDebug("%f, %f, %f", itt->x(), itt->y(), itt->z());
 	// qDebug("%f, %f, %f", last.at<float>(0, 0) - lastlast.at<float>(0, 0), last.at<float>(1, 0) - lastlast.at<float>(1, 0), last.at<float>(2, 0) - lastlast.at<float>(2, 0));
 	}
-	//////畫追蹤端點
-	glPointSize(8);
-	glBegin(GL_POINT);
-	glColor3f(0.0f, 1.0f, 1.0f);
-	tracing_pts;
-	glEnd();
-	
+	///////////////////畫黃色追蹤端點////////////////////
 }
+
 GLuint OpenGLWidget::makeObject(STLModel *model) {
 	GLuint _list;
 	_list = glGenLists(1);

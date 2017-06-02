@@ -18,7 +18,10 @@ class MainWindow : public QMainWindow
 public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
+	vector<QVector3D> tracing_pts;
+
 private slots:
+	void ExportCurrentState();
 	void upper_click();
 	void lower_click();
 	void rt_click();
@@ -26,6 +29,7 @@ private slots:
 private:
 	void RT_parser(const char* rt_path, vector<vector<float>> &RTs);
 	vector<vector<float>> RT_result;
+	
     Ui::MainWindow *ui;
 };
 
